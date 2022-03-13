@@ -1,6 +1,14 @@
 .tabs {
-    float: left;
-    width: 92%;
+    flex: 11;
+    position: relative;
+}
+
+.tabs-hr {
+  position: absolute;
+  top: 8%;
+  width: 100%;
+  left: 2.5em;
+  border-top: 2px solid black;
 }
 
 .tab-header {
@@ -13,11 +21,12 @@
     font-size: 20px;
     letter-spacing: 1px;
     color: #999999;
+    width: 100%;
 }
 
   .tab-header li {
     display: inline;
-    padding: 7px 12px;
+    padding: 7px 20px;
     line-height: 35px;
   
     cursor: pointer;
@@ -25,21 +34,16 @@
   
   .tab-header li.active,
   .tab-header li:hover {
-    text-decoration: underline;
     font-size: 30px;
     color: black;
   }
 
   .tab-content {
     background: #fff;
-    border: 1px solid #dedeed;
     width: 100%;
     position: relative;
   }
-  
-  .tab-child {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+
+  .tab-controls {
+    float: right;
   }

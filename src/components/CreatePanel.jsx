@@ -2,6 +2,8 @@ import SideMenu from "./SideMenu"
 import "../css/CreatePanel.css"
 import Tabs from "./core/Tabs";
 import Tab from "./core/Tab";
+import LocationTab from "./create-panel-tabs/LocationTab";
+import DataTab from "./create-panel-tabs/DataTab";
 
 
 const CreatePanel = () => {
@@ -9,12 +11,21 @@ const CreatePanel = () => {
         <div class="create-panel">
             <SideMenu />
             <Tabs>
-                <Tab name="Tab 1">
-                    <span>cao cao</span>
-                    </Tab>
-                    <Tab name="Tab 2">
-                        <span>cao</span>
-                    </Tab>
+                <Tab name="Location">
+                    <LocationTab />
+                </Tab>
+                <Tab name="Data">
+                    <DataTab />
+                </Tab>
+                <Tab name="Pricing">
+                    <span>cao</span>
+                </Tab>
+                <Tab name="Overview">
+                    <span>cao</span>
+                </Tab>
+                <Tab name="Success">
+                    <span>cao</span>
+                </Tab>
             </Tabs>
         </div>
     )

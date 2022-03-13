@@ -13,6 +13,21 @@
     color: #000000;
 }
 
+.white-button {
+    width: 10em;
+    height: 3em;
+    background: white;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 17px;
+    text-align: center;
+    border: 1px solid lightgray;
+
+    color: #000000;
+}
+
 a {
     font-family: 'Montserrat';
     font-style: normal;
