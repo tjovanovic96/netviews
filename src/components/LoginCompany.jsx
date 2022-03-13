@@ -51,8 +51,8 @@ const LoginCompany = () => {
         <>
         <BasicHeader text="Login" />
         <div className="login-wrapper">
-          <Input value={companyId} setFieldValue={setCompanyId} label="Company ID" type="text" icon="id" />
-          <Input value={password} setFieldValue={setPassword} label="Password" type="password" icon="password" />
+          <Input centered={true} value={companyId} setFieldValue={setCompanyId} label="Company ID" type="text" icon="id" />
+          <Input centered={true} value={password} setFieldValue={setPassword} label="Password" type="password" icon="password" />
           <div className="login-actions">
           <button type="submit" onClick={handleSubmit} className="yellow-button">Login</button>
           <a href="/register/company" className="register-link">Register</a>

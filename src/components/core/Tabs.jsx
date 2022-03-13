@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "../../css/core/Tabs.css";
+import "../../css/Common.css";
+import { Button } from "react-bootstrap";
 
 const Tabs = (props) => {
   const { children } = props;
@@ -37,6 +39,7 @@ const Tabs = (props) => {
           </li>
         ))}
       </ul>
+      <hr className="tabs-hr"/>
       <div className="tab-content">
         {Object.keys(childContent).map((key) => {
           if (key === active) {
@@ -45,6 +48,10 @@ const Tabs = (props) => {
             return null;
           }
         })}
+      </div>
+      <div className="tab-controls">
+        <button className="white-button">Back</button>
+        <button className="yellow-button">Next</button>
       </div>
     </div>
   );
