@@ -1,7 +1,7 @@
 .yellow-button {
     width: 10em;
     height: 3em;
-    background: #FDC02D;
+    background: #FDC02D !important;
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: bold;

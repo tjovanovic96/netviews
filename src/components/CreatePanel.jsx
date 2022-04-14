@@ -4,6 +4,7 @@ import Tabs from "./core/Tabs";
 import Tab from "./core/Tab";
 import LocationTab from "./create-panel-tabs/LocationTab";
 import DataTab from "./create-panel-tabs/DataTab";
+import PricingTab from "./create-panel-tabs/PricingTab";
 
 
 const CreatePanel = () => {
@@ -18,7 +19,7 @@ const CreatePanel = () => {
                     <DataTab />
                 </Tab>
                 <Tab name="Pricing">
-                    <span>cao</span>
+                    <PricingTab />
                 </Tab>
                 <Tab name="Overview">
                     <span>cao</span>
