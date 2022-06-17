@@ -14,6 +14,8 @@ const ImageDragAndDropEmpty = (props) => {
         }
     });
 
+    if(props.disabled) return null;
+
     return (
         <div class='data-tab-right data-tab-right-centered'>
             <div class='image-upload-container page-size' {...getRootProps?.({ className: 'dropzone' })}>

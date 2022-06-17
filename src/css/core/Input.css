@@ -48,3 +48,25 @@ input:focus {
     border:1px solid #FDC02D;
     box-shadow: 0 0 10px #719ECE;
   }
+
+  .input-small {
+    width: 4em !important;
+    margin: 0 !important;
+    align-content: center;
+}
+
+.select-small {
+    width: 10em !important;
+    margin: 0 !important;
+    align-content: center;
+}
+
+.select-field-small {
+    width: 10em !important;
+    margin: 0 !important;
+}
+
+.input-field-small {
+    width: 4em !important;
+    margin: 0 !important;
+}

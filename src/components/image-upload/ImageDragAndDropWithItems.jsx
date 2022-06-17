@@ -1,5 +1,6 @@
 import React from "react";
 import { AiOutlineCloudUpload } from "react-icons/ai"
+import {BiArrowToTop} from 'react-icons/bi';
 import "../../css/ImageUpload.css"
 import { useDropzone } from 'react-dropzone';
 
@@ -7,6 +8,7 @@ const imgUrl = 'https://vignette.wikia.nocookie.net/naruto/images/d/dd/Naruto_Uz
 
 
 const ImageDragAndDropWithItems = (props) => {
+    const {mainImage, setMainImage, disabled} = props;
 
     const { getRootProps, getInputProps } = useDropzone({
         accept: 'image/*',
@@ -23,18 +25,25 @@ const ImageDragAndDropWithItems = (props) => {
                 {props.files?.map(file =>
                     <div class='image-upload-column'>
                         <div class="image-area">
-                            <img src={file.preview} alt="Preview" />
-                            <a class="remove-image" onClick={() => props.removeFile(file)} style={{ display: 'inline' }}>&#215;</a>
+                        <div class="imageBox">
+                            <div class="imageInn">
+                                <img class={file.preview === mainImage?.preview ? "img-bordered": ""} src={file.preview} alt="Preview" />
+                            </div>
+                            {!disabled && <div class="hoverImg">
+                                <a onClick={() => setMainImage(file)}><BiArrowToTop className="hoverImgIcon" /></a>
+                            </div>}
+                        </div>
+                            {!disabled && <a class="remove-image" onClick={() => props.removeFile(file)} style={{ display: 'inline' }}>&#215;</a>}
                         </div>
                     </div>)}
 
-                <div class='image-upload-column' {...getRootProps?.({ className: 'dropzone' })}>
+                {props.files.length < 9 && !disabled && <div class='image-upload-column' {...getRootProps?.({ className: 'dropzone' })}>
                     <input {...getInputProps?.()} />
                     <div className="image-upload-container column-size">
                         <AiOutlineCloudUpload className="image-upload-icon" />
                         <h1>Drag and drop images here to upload</h1>
                     </div>
-                </div>
+                </div>}
             </div>
         </div>
     )

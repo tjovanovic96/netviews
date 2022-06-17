@@ -4,7 +4,7 @@ import classnames from 'classnames';
 
 const TextArea = (props) => {
     const handleChange = (event) => {
-        props.setFieldValue(event.target.value);
+        props.setFieldValue?.(event.target.value);
       };
 
       const className = classnames({

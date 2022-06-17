@@ -12,16 +12,23 @@ import classnames from 'classnames';
 
 const Input = (props) => {
     const handleChange = (event) => {
-        props.setFieldValue(event.target.value);
+        props.setFieldValue?.(event.target.value);
       };
 
       const className = classnames({
         'input-field': true,
         'input-field-centered': props.centered,
+        'input-field-small': props.small
+    });
+      
+        const inputClassName = classnames({
+            'input': true,
+            'input-small': props.small
+
     })
 
     return (
-        <div className="input">
+        <div className={inputClassName}>
             <label for="select-id" className="select-label">{props.label}</label>
             {props.icon === "mail" && <FiMail className="icon" />}
             {props.icon === "house" && <BsHouseDoor className="icon" />}
@@ -31,7 +38,7 @@ const Input = (props) => {
             {props.icon === "city" && <GiModernCity className="icon" />}
             {props.icon === 'phone' && <HiOutlinePhone className="icon" />}
             {props.icon === "name" && <FiFileText className="icon" />}
-            <input className={className} type={props.type} placeholder={props.label} value={props.value}
+            <input className={className} type={props.type} placeholder={props.placeholder ?? props.label} value={props.value}
             onChange={handleChange} />
         </div>
     )

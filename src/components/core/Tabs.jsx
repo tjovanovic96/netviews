@@ -7,24 +7,58 @@ const Tabs = (props) => {
   const { children } = props;
   const [tabHeader, setTabHeader] = useState([]);
   const [childContent, setChildConent] = useState({});
+  const [childProps, setChildProps] = useState({});
   const [active, setActive] = useState("");
+  const [firstRender, setFirstRender]= useState(true);
+
 
   useEffect(() => {
     const headers = [];
     const childCnt = {};
+    const childProps = {};
     React.Children.forEach(children, (element) => {
       const { name } = element.props;
       headers.push(name);
       childCnt[name] = element.props.children;
+      childProps[name] = element.props.children.props;
     });
+
     setTabHeader(headers);
-    setActive(headers[0]);
+    if (firstRender) {
+      setFirstRender(false);
+      setActive(headers[0]);
+    }
+    setChildProps({ ...childProps });
     setChildConent({ ...childCnt });
-  }, [props, children]);
+  }, [props, children, firstRender]);
 
   const changeTab = (name) => {
     setActive(name);
   };
+
+  const goBack = () => {
+    React.Children.forEach(children, (element, index) => {
+      const { name } = element.props;
+      if (name === active) {
+        setActive(children[index - 1].props.name);
+      }
+    });
+  }
+
+  const goNext = () => {
+    React.Children.forEach(children, (element, index) => {
+      const { name } = element.props;
+      if (name === active) {
+        setActive(children[index + 1].props.name);
+      }
+    });
+  }
+
+  const lastTab = tabHeader[tabHeader.length - 1] === active;
+
+  const complete = childProps?.[active]?.completeCallback;
+
+  console.log(childProps);
 
   return (
     <div className="tabs">
@@ -49,10 +83,10 @@ const Tabs = (props) => {
           }
         })}
       </div>
-      <div className="tab-controls">
-        <button className="white-button">Back</button>
-        <button className="yellow-button">Next</button>
-      </div>
+      {!lastTab && <div className="tab-controls">
+        <button className="white-button" onClick={goBack}>Back</button>
+      <button className="yellow-button" onClick={lastTab ? complete : goNext} disabled={childProps?.[active]?.nextDisabled}>{lastTab ? "Finish" : "Next"}</button>
+      </div>}
     </div>
   );
 };
