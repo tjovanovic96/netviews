@@ -7,6 +7,7 @@ import DataTab from "./create-panel-tabs/DataTab";
 import PricingTab from "./create-panel-tabs/PricingTab";
 import OverviewTab from "./create-panel-tabs/OverviewTab";
 import SuccessCreatePanel from "./SuccessCreatePanel";
+import PanelSearch from "./panel-search/PanelSearch"
 import { useState } from "react";
 import { gql, useMutation } from "@apollo/client";
 
@@ -98,6 +99,9 @@ const CreatePanel = () => {
                 </Tab>
                 <Tab name="Success">
                     <SuccessCreatePanel />
+                </Tab>
+                <Tab name="Panels">
+                    <PanelSearch />
                 </Tab>
             </Tabs>
         </div>

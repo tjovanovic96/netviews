@@ -1,0 +1,36 @@
+.panel-search-filters {
+    flex-direction: row;
+    flex: 5;
+    display: flex;
+}
+
+.panel-search-wrapper {
+    flex-direction: column;
+    display: flex;
+    width: 100%;
+}
+
+.panel-search-header-wrapper {
+    flex-direction: row;
+    display: flex;
+    width: 100%;
+}
+
+.panel-search-body-wrapper {
+    flex-direction: row;
+    display: flex;
+    width: 100%;
+}
+
+.panel-search-right {
+    flex: 8;
+    display: flex;
+    flex-direction: row;
+}
+
+.panel-search-left {
+    margin: 1em;
+    flex: 4;
+    display: flex;
+    flex-direction: column;
+}

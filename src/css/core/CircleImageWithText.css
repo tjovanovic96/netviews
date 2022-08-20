@@ -1,0 +1,44 @@
+.circle-image-wrapper-with-indicator {
+    flex-direction: row;
+    display: flex;
+    width: 100%;
+}
+
+.circle-image-wrapper {
+    flex: 11;
+    flex-direction: row;
+    display: flex;
+    width: 100%;
+}
+
+.circle-image-text-wrapper {
+    flex-direction: column;
+    display: flex;
+    width: 100%;
+    padding-bottom: 2em;
+}
+
+.circle-image-text-wrapper h5 {
+    font-family: 'Montserrat';
+    font-style: normal;
+    color: #999999;
+    font-size: 15px;
+}
+
+.circle-image-text-wrapper p {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-size: 18px;
+}
+
+.circle-image {
+    vertical-align: middle;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+
+  .circle-with-image-free-indicator {
+    background-color: #27AE60;
+    flex: 1;
+}
