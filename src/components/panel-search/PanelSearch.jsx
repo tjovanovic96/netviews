@@ -5,17 +5,37 @@ import Select from "../core/Select";
 import Pagination from '../core/Pagination';
 import { withScriptjs, withGoogleMap, GoogleMap, Marker, InfoWindow } from "react-google-maps"
 
-const MyMapComponent = withScriptjs(withGoogleMap((props) =>
-    <GoogleMap
+const MyMapComponent = withScriptjs(withGoogleMap((props) => {
+
+    const [selectedPanel, setSelectedPanel] = useState(null)
+
+    return (<GoogleMap
         defaultZoom={8}
         defaultCenter={{ lat: 51.507351, lng: -0.127758 }}
     >
         {panels.map((panel) => {
-            return <Marker key={panel.id} position={{ lat: panel.lat, lng: panel.lng }} />
+            return <Marker
+                key={panel.id}
+                position={{ lat: panel.lat, lng: panel.lng }}
+                onClick={() => setSelectedPanel(panel)}
+            />
         }
         )}
-    </GoogleMap>
-))
+
+        {selectedPanel && (
+            <InfoWindow
+                position={{ lat: selectedPanel.lat, lng: selectedPanel.lng }}
+                onCloseClick={() => setSelectedPanel(null)}>
+                <div className="panel-map-box">
+                    <img src={selectedPanel.imgUrl} alt="Avatar" />
+                    <p>{selectedPanel.address}</p>
+                </div>
+            </InfoWindow>
+        )
+
+        }
+    </GoogleMap>)
+}))
 
 const PanelSearch = (props) => {
     const [currentPage, setCurrentPage] = useState(1);
