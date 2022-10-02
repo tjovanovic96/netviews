@@ -1,7 +1,6 @@
 import "../../css/OverviewTab.css"
 import "../../css/Common.css";
 import "../../css/core/Input.css"
-import GoogleMapReact from 'google-map-react';
 import ImageDragAndDrop from "../image-upload/ImageDragAndDrop";
 
 const OverviewTab = (props) => {
@@ -95,9 +94,7 @@ const OverviewTab = (props) => {
                 ))}
             </div>
             <div class="overview-elem-col">
-            <GoogleMapReact bootstrapURLKeys={{}}
-                center={{lat: 30.00, lng: 35.00}}
-                zoom={11} />
+            
             </div>
         </div>
         <div>

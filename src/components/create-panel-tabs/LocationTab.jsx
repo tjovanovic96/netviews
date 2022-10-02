@@ -2,7 +2,6 @@ import "../../css/LocationTab.css"
 import "../../css/Common.css";
 import Input from "../core/Input";
 import Select from "../core/Select";
-import GoogleMapReact from 'google-map-react';
 import { useState } from "react";
 import { useCallback } from "react";
 
@@ -24,7 +23,7 @@ const LocationTab = (props) => {
     return (
         <div class="location-tab">
             <div class="location-tab-left">
-                <Select label="Country" values={["Serbia", "United Kingdom"]} setFieldValue={setCountry}  value={country} />
+                <Select label="Country" values={["Serbia", "United Kingdom"]} setFieldValue={setCountry} value={country} />
                 <Input label="City" type="text" setFieldValue={setCity} value={city} />
                 <Input label="Address" type="text" setFieldValue={setAddress} value={address} />
                 <Select label="Advertising Type" values={["", "DIGITAL", "STATIC"]} setFieldValue={setAdvertisingType} value={advertisingType} />
@@ -35,16 +34,7 @@ const LocationTab = (props) => {
                 <button className="white-button ml-s" onClick={applyCoordinates}>Apply coordinates</button>
             </div>
             <div class="location-tab-right">
-                <GoogleMapReact bootstrapURLKeys={{}}
-                center={{lat: calculatedLatitude, lng: calculatedLongitude}}
-                zoom={11}>
-                    <AnyReactComponent
-    lat={59.955413}
-    lng={30.337844}
-    text="My Marker"
-  />
-
-                    </GoogleMapReact>
+                
             </div>
         </div>
     )

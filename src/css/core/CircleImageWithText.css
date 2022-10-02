@@ -2,20 +2,22 @@
     flex-direction: row;
     display: flex;
     width: 100%;
+    border-bottom: 1px solid gray;
 }
 
 .circle-image-wrapper {
     flex: 11;
     flex-direction: row;
     display: flex;
+    padding-top: 10px;
     width: 100%;
 }
 
 .circle-image-text-wrapper {
     flex-direction: column;
     display: flex;
+    padding-left: 10px;
     width: 100%;
-    padding-bottom: 2em;
 }
 
 .circle-image-text-wrapper h5 {
@@ -40,5 +42,5 @@
 
   .circle-with-image-free-indicator {
     background-color: #27AE60;
-    flex: 1;
+    width: 15px;
 }
