@@ -1,0 +1,76 @@
+th {
+    font-family: 'Montserrat';
+    color: #999999;
+    font-style: normal;
+    font-weight: 400;
+}
+
+h5 {
+    font-family: 'Montserrat';
+    text-align: left;
+}
+
+.pricing-table {
+   margin-left: 5em;
+   margin-right: 5em;
+   text-align: left;
+}
+
+.text-grey {
+    color: #999999;
+}
+
+.marginless {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.align-row {
+    display: inline;
+}
+
+.button-yellow {
+    width: 100%;
+    height: 100%;
+    background: #FDC02D !important;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    text-align: center;
+    border: 0px;
+
+    color: #000000;
+}
+
+.button-grey {
+    width: 100%;
+    height: 100%;
+    background: #E5E5E5 !important;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    text-align: center;
+    border: 0px;
+
+    color: #000000;
+}
+
+.button-green {
+    width: 100%;
+    height: 3.8em;
+    background: green !important;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    text-align: center;
+    border: 0px;
+
+    color: #000000;
+}
+
+td {
+    align-content: center;
+}

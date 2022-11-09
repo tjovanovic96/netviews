@@ -72,16 +72,16 @@ const RegisterCompany = () => {
       <BasicHeader text="Register" />
       <div className="register-company">
           <div className="register-left">
-          <Input value={email} setFieldValue={setEmail} label="Email" type="text" icon="mail" />
-          <Input value={username} setFieldValue={setUsername} label="Username" type="text" icon="id" />
-          <Input value={password} setFieldValue={setPassword} label="Password" type="password" icon="password" />
-          <Input value={repeatedPassword} setFieldValue={setRepeatedPassword} label="Repeated password" type="password" icon="password" />
+          <Input centered={true} value={email} setFieldValue={setEmail} label="Email" type="text" icon="mail" />
+          <Input centered={true} value={username} setFieldValue={setUsername} label="Username" type="text" icon="id" />
+          <Input centered={true} value={password} setFieldValue={setPassword} label="Password" type="password" icon="password" />
+          <Input centered={true} value={repeatedPassword} setFieldValue={setRepeatedPassword} label="Repeated password" type="password" icon="password" />
           </div>
           <div className="register-right">
-            <Input value={firstName} setFieldValue={setFirstName} label="First name" type="text" icon="name" />
-            <Input value={lastName} setFieldValue={setLastName} label="Last name" type="text" icon="name" />
-            <Input value={phoneNumber} setFieldValue={setPhoneNumber} label="Phone number" type="text" icon="phone" />
-            <Select value={userKind} setFieldValue={setUserKind} label="Select user kind:" values={["ADMIN", "USER"]} icon="userKind" />
+            <Input centered={true} value={firstName} setFieldValue={setFirstName} label="First name" type="text" icon="name" />
+            <Input centered={true} value={lastName} setFieldValue={setLastName} label="Last name" type="text" icon="name" />
+            <Input centered={true} value={phoneNumber} setFieldValue={setPhoneNumber} label="Phone number" type="text" icon="phone" />
+            <Select centered={true} value={userKind} setFieldValue={setUserKind} values={["ADMIN", "USER"]} icon="userKind" />
           </div>
       </div>
       <div className="register-actions">

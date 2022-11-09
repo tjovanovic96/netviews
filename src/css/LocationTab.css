@@ -1,0 +1,22 @@
+.location-tab-left {
+    flex: 4;
+    flex-direction: column;
+}
+
+.location-tab-right {
+    flex: 8;
+    margin-right: 2em;
+    margin-bottom: 2em;
+    display: flex;
+    flex-direction: column;
+}
+
+.location-tab {
+    flex-direction: row;
+    display: flex;
+    width: 100%;
+}
+
+.ml-s {
+    margin-left: 20px;
+}

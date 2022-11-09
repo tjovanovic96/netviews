@@ -76,18 +76,18 @@ const RegisterCompany = () => {
       <BasicHeader text="Register" />
       <div className="register-company">
           <div className="register-left">
-          <Input value={email} setFieldValue={setEmail} label="Email" type="text" icon="mail" />
-          <Input value={companyName} setFieldValue={setCompanyName} label="Company name" type="text" icon="house" />
-          <Input value={companyId} setFieldValue={setCompanyId} label="ID number of company" type="text" icon="id" />
-          <Input value={password} setFieldValue={setPassword} label="Password" type="password" icon="password" />
-          <Input value={repeatedPassword} setFieldValue={setRepeatedPassword} label="Repeated password" type="password" icon="password" />
+          <Input centered={true} value={email} setFieldValue={setEmail} label="Email" type="text" icon="mail" />
+          <Input centered={true} value={companyName} setFieldValue={setCompanyName} label="Company name" type="text" icon="house" />
+          <Input centered={true} value={companyId} setFieldValue={setCompanyId} label="ID number of company" type="text" icon="id" />
+          <Input centered={true} value={password} setFieldValue={setPassword} label="Password" type="password" icon="password" />
+          <Input centered={true} value={repeatedPassword} setFieldValue={setRepeatedPassword} label="Repeated password" type="password" icon="password" />
           </div>
           <div className="register-right">
-            <Input value={country} setFieldValue={setCountry} label="Country" type="text" icon="country" />
-            <Input value={city} setFieldValue={setCity} label="City" type="text" icon="city" />
-            <Input value={address} setFieldValue={setAddress} label="Address" type="text" icon="house" />
-            <Input value={phoneNumber} setFieldValue={setPhoneNumber} label="Phone number" type="text" icon="phone" />
-            <Select value={userKind} setFieldValue={setUserKind} label="Select user kind:" values={["ADMIN", "USER"]} icon="userKind" />
+            <Input centered={true} value={country} setFieldValue={setCountry} label="Country" type="text" icon="country" />
+            <Input centered={true} value={city} setFieldValue={setCity} label="City" type="text" icon="city" />
+            <Input centered={true} value={address} setFieldValue={setAddress} label="Address" type="text" icon="house" />
+            <Input centered={true} value={phoneNumber} setFieldValue={setPhoneNumber} label="Phone number" type="text" icon="phone" />
+            <Select centered={true} value={userKind} setFieldValue={setUserKind} values={["ADMIN", "USER"]} icon="userKind" />
           </div>
       </div>
       <div className="register-actions">

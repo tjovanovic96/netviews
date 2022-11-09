@@ -2,8 +2,16 @@
 .input {
     margin-top: 20px;
     margin-bottom: 10px;
-    text-align: center;
+    margin-left: 20px;
     position: relative;
+}
+
+.select-label {
+    font-size: 14px;
+    color: #999999;
+    display: block;
+    align-self: baseline;
+    padding-left: 10px;
 }
   
 .icon {
@@ -19,11 +27,14 @@
 .input-field {
     width: 20em;
     padding: 10px;
-    text-align: center;
     border-top: 0px;
     border-left: 0px;
     border-bottom: 1px solid black;
     border-right: 0px;
+}
+
+.input-field-centered {
+    text-align: center;
 }
 
 input:focus {
@@ -31,3 +42,31 @@ input:focus {
     border:1px solid #FDC02D;
     box-shadow: 0 0 10px #719ECE;
   }
+
+  textarea:focus {
+    outline: none !important;
+    border:1px solid #FDC02D;
+    box-shadow: 0 0 10px #719ECE;
+  }
+
+  .input-small {
+    width: 4em !important;
+    margin: 0 !important;
+    align-content: center;
+}
+
+.select-small {
+    width: 10em !important;
+    margin: 0 !important;
+    align-content: center;
+}
+
+.select-field-small {
+    width: 10em !important;
+    margin: 0 !important;
+}
+
+.input-field-small {
+    width: 4em !important;
+    margin: 0 !important;
+}

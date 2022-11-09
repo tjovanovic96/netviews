@@ -1,0 +1,39 @@
+.overview-tab {
+    flex-direction: row;
+    display: flex;
+    flex: 2;
+}
+
+.overview-elem-col {
+    max-width: 35%;
+    min-width: 33%;
+}
+
+.overview-elem-row {
+    flex-direction: row;
+    display: flex;
+    border: 1px solid #E5E5E5;
+    align-items: center;
+    justify-content: center;
+}
+
+.overview-elem-header {
+    background: #F4F4F4;
+    min-height: 2em;
+    line-height: 2em;
+    font-size: 20px;
+    padding: 0.4em;
+    padding-left: 1.3em;
+    border: 1px solid #E5E5E5;
+}
+
+.overview-elem {
+    min-height: 2em;
+    border: 1px solid #E5E5E5;
+    padding: 1em;
+}
+
+.overview-span {
+    padding-left: 0.5em;
+    font-size: 20px;
+}

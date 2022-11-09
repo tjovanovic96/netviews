@@ -8,6 +8,7 @@ import LoginCompany from "./components/LoginCompany";
 import Success from "./components/Success";
 import Verify from "./components/Verify";
 import CreatePanel from "./components/CreatePanel";
+import PanelSearch from "./components/panel-search/PanelSearch";
 
 
 class App extends Component {
@@ -23,6 +24,7 @@ class App extends Component {
           <Route path="/verify/:verifyToken" exact component={Verify} />
     
           <Route path="/createPanel" exact userKind="ADMIN" component={CreatePanel} />
+          <Route path="/panels" userKind="USER" component={PanelSearch} />
         </Switch>
       </BrowserRouter>
     );

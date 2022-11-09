@@ -49,14 +49,14 @@ const LoginCompany = () => {
 
     return (
         <>
-        <BasicHeader text="Login" />
-        <div className="login-wrapper">
-          <Input value={companyId} setFieldValue={setCompanyId} label="Company ID" type="text" icon="id" />
-          <Input value={password} setFieldValue={setPassword} label="Password" type="password" icon="password" />
-          <div className="login-actions">
-          <button type="submit" onClick={handleSubmit} className="yellow-button">Login</button>
-          <a href="/register/company" className="register-link">Register</a>
-      </div>
+        <BasicHeader text="Login" /> 
+        <div className="login-wrapper"> 
+          <Input centered={true} value={companyId} setFieldValue={setCompanyId} label="Company ID" type="text" icon="id" /> 
+          <Input centered={true} value={password} setFieldValue={setPassword} label="Password" type="password" icon="password" /> 
+          <div className="login-actions"> 
+          <button type="submit" onClick={handleSubmit} className="yellow-button">Login</button> 
+          <a href="/register/company" className="register-link">Register</a> 
+      </div> 
       <div className="register-text">
           <a href="/login/individual">Want to login as an individual?</a>
       </div>

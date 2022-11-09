@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/netviews/static/css/main.682fce13.chunk.css",
+    "main.js": "/netviews/static/js/main.163b7846.chunk.js",
+    "main.js.map": "/netviews/static/js/main.163b7846.chunk.js.map",
+    "runtime-main.js": "/netviews/static/js/runtime-main.1348bd15.js",
+    "runtime-main.js.map": "/netviews/static/js/runtime-main.1348bd15.js.map",
+    "static/css/2.818011ed.chunk.css": "/netviews/static/css/2.818011ed.chunk.css",
+    "static/js/2.9dfbc125.chunk.js": "/netviews/static/js/2.9dfbc125.chunk.js",
+    "static/js/2.9dfbc125.chunk.js.map": "/netviews/static/js/2.9dfbc125.chunk.js.map",
+    "static/js/3.1cecddba.chunk.js": "/netviews/static/js/3.1cecddba.chunk.js",
+    "static/js/3.1cecddba.chunk.js.map": "/netviews/static/js/3.1cecddba.chunk.js.map",
+    "index.html": "/netviews/index.html",
+    "static/css/2.818011ed.chunk.css.map": "/netviews/static/css/2.818011ed.chunk.css.map",
+    "static/css/main.682fce13.chunk.css.map": "/netviews/static/css/main.682fce13.chunk.css.map",
+    "static/js/2.9dfbc125.chunk.js.LICENSE.txt": "/netviews/static/js/2.9dfbc125.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.1348bd15.js",
+    "static/css/2.818011ed.chunk.css",
+    "static/js/2.9dfbc125.chunk.js",
+    "static/css/main.682fce13.chunk.css",
+    "static/js/main.163b7846.chunk.js"
+  ]
+}
